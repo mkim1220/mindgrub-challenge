@@ -1,0 +1,14 @@
+﻿@model ZipcodeViewModel
+
+<div class="text-center">
+    <form method="post">
+        <div class="error-msg">
+            @ViewBag.Message
+            @Html.ValidationMessageFor(m => m.Zipcode)
+        </div>
+        <div>
+            <input asp-for="Zipcode" />
+            <input type="submit" value="Calculate Distance" />
+        </div>
+    </form>
+</div>
